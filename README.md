@@ -1,4 +1,4 @@
-# docusaurus Deploy GitHub Pages Action
+# Docusaurus Deploy GitHub Pages Action
 
 This GitHub action for building and deploying docusaurus project to GitHub pages.
 
