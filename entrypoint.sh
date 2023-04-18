@@ -42,15 +42,6 @@ apt-get install -y git && \
 # Directs the action to the the Github workspace.
 cd "${GITHUB_WORKSPACE}"
 
-echo ">>> Install NPM dependencies ..."
-npm install
-
-echo ">>> Clean cache files ..."
-npx hexo clean
-
-echo ">>> Generate file ..."
-npx hexo generate
-
 cd "${TARGET_PUBLISH_DIR}"
 
 # Configures Git.
@@ -74,7 +65,7 @@ fi
 git add .
 
 echo '>>> Start Commit ...'
-git commit --allow-empty -m "Building and deploying Hexo project from Github Action"
+git commit --allow-empty -m "deploying docusaurus project from Github Action"
 
 echo '>>> Start Push ...'
 git push -u origin "${TARGET_BRANCH}" --force
