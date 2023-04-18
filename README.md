@@ -1,6 +1,6 @@
-# Hexo Deploy GitHub Pages Action
+# docusaurus Deploy GitHub Pages Action
 
-This GitHub action for building and deploying Hexo project to GitHub pages.
+This GitHub action for building and deploying docusaurus project to GitHub pages.
 
 ## Getting Started
 
@@ -21,15 +21,15 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: theme-keep/hexo-deploy-github-pages-action@master
+      uses: wrm244/docusaurus-deploy-action@master
       env:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         # The repository the action should deploy to.
-        PUBLISH_REPOSITORY: theme-keep/site
+        PUBLISH_REPOSITORY: wrm244/site
 
         # The branch the action should deploy to.
-        BRANCH: master
+        BRANCH: main
 ```
 
 if you want to make the workflow only triggers on push events to specific branches, you can like this: 
@@ -38,7 +38,7 @@ if you want to make the workflow only triggers on push events to specific branch
 on:
   push:	
     branches:	
-      - master
+      - main
 ```
 
 ## Configuration
