@@ -7,7 +7,7 @@ This GitHub action for building and deploying docusaurus project to GitHub pages
 You can view an example of this below.
 
 ```yml
-name: Hexo Deploy GitHub Pages
+name: Deploy GitHub Pages
 on:
   push:
     branches:
