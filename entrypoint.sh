@@ -50,7 +50,7 @@ echo ">>> Config git ..."
 
 CURRENT_DIR=$(pwd)
 
-# git init
+git init
 git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global --add safe.directory "${CURRENT_DIR}"
@@ -68,7 +68,6 @@ echo '>>> Start Commit ...'
 git commit --allow-empty -m "deploying docusaurus project from Github Action"
 
 echo '>>> Start Push ...'
-git push -u origin "${TARGET_BRANCH}"
-# git push -u origin "${TARGET_BRANCH}" --force
+git push -u origin "${TARGET_BRANCH}" --force
 
 echo ">>> Deployment successful!"
