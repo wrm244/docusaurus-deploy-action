@@ -65,7 +65,8 @@ fi
 git add .
 
 echo '>>> Start Commit ...'
-git commit --allow-empty -m "deploying docusaurus project from Github Action"
+DATE=(date "+%Y-%m-%d %H:%M")
+git commit --allow-empty -m "deployed from Github Action on $DATE"
 
 echo '>>> Start Push ...'
 git push -u origin "${TARGET_BRANCH}" --force
